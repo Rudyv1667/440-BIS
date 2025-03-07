@@ -15,7 +15,7 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/public/logo-removebg-preview.png" alt="Logo" className="h-16 mb-2" />
+          <img src="/logo-removebg-preview.png" alt="Logo" className="h-16 mb-2" />
           <p className="text-sm">Muebles industriales de calidad, diseñados para durar.</p>
         </motion.div>
 

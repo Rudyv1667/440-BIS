@@ -29,7 +29,7 @@ const Header = () => {
     >
       <div className="max-w-7xl relative mx-auto h-16 flex justify-between items-center py-4 px-6">
         <motion.img
-          src="/public/logo-removebg-preview.png"
+          src="/logo-removebg-preview.png"
           alt="Logo"
           className="relative left-0 transform h-15 w-auto"
           initial={{ scale: 0.8, opacity: 0 }}

@@ -15,7 +15,7 @@ const HeroSection = () => {
         className="absolute w-screen h-screen bg-cover bg-left"
         id="mainimg"
         style={{
-          backgroundImage: "url('./public/muebles-comedor-estilo-industrial.png')",
+          backgroundImage: "url('/muebles-comedor-estilo-industrial.png')",
         }}
       />
 

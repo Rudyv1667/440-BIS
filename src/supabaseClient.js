@@ -1,8 +1,8 @@
 // supabaseClient.js
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.SUPABASE_URL || import.meta.env.SUPABASE_URL;
-const supabaseServRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseServRoleKey = import.meta.env.VITE_SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !supabaseServRoleKey) {
   throw new Error("Missing Supabase environment variables!");

@@ -11,8 +11,8 @@ app.use(express.json());
 
 // Initialize Supabase
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY // Uses service role to bypass RLS (use carefully)
+  process.env.VITE_SUPABASE_URL,
+  process.env.VITE_SUPABASE_ANON_KEY // Uses service role to bypass RLS (use carefully)
 );
 
 // Multer Storage (Temporary Memory)

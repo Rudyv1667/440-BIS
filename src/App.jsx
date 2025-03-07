@@ -9,7 +9,6 @@ import HeroSection from './components/HeroSection';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import AdminPanel from "./components/AdminPanel";
 import Contact from './components/Contact'; // Import Contact page
 
 const pageVariants = {
@@ -76,21 +75,6 @@ const AnimatedRoutes = () => {
               exit="exit"
             >
               <Contact />
-            </motion.div>
-          }
-        />
-
-        {/* Admin Panel Page */}
-        <Route
-          path="/admin"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              <AdminPanel />
             </motion.div>
           }
         />

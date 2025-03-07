@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // Import Link for routing
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'; // Import social media icons
+import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Import social media and WhatsApp icon
 
 const Footer = () => {
   return (
@@ -22,15 +22,14 @@ const Footer = () => {
         {/* Quick Links */}
         <nav className="mb-6">
           <ul className="flex justify-center space-x-6 text-sm text-gray-800">
-            {["Menú", "Contacto"].map((item, index) => (
+            {["Menú", "Contacto", "About Us", "FAQ"].map((item, index) => (
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.1, color: "#ffffff" }}
                 className="cursor-pointer hover:text-white transition"
               >
-                {/* Add Link component here */}
                 <Link 
-                  to={item === "Menú" ? "/" : "/Contact"}
+                  to={item === "Menú" ? "/" : item === "Contacto" ? "/contact" : `/${item.toLowerCase().replace(' ', '-')}`}
                   className="hover:text-white"
                 >
                   {item}
@@ -42,16 +41,36 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 text-lg mb-4">
-          {[faFacebook, faInstagram, faTwitter].map((icon, index) => (
-            <motion.a
-              key={index}
-              href="#"
-              whileHover={{ scale: 1.2 }}
-              className="hover:text-white transition"
-            >
-              <FontAwesomeIcon icon={icon} className="bg-transparent" />
-            </motion.a>
-          ))}
+          {/* Facebook */}
+          <motion.a
+            href="https://www.facebook.com/profile.php?id=61573547551568"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }}
+            className="hover:text-white transition"
+          >
+            <FontAwesomeIcon icon={faFacebook} className="bg-transparent" />
+          </motion.a>
+          {/* Instagram */}
+          <motion.a
+            href="https://www.instagram.com/440.bis.muebles?igsh=MWExNXk2MXZlbXlpMQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }}
+            className="hover:text-white transition"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="bg-transparent" />
+          </motion.a>
+          {/* WhatsApp */}
+          <motion.a
+            href="https://wa.me/542974288934"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }}
+            className="hover:text-white transition"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} className="bg-transparent" />
+          </motion.a>
         </div>
 
         {/* Google Map with responsive styles */}

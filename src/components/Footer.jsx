@@ -22,7 +22,7 @@ const Footer = () => {
         {/* Quick Links */}
         <nav className="mb-6">
           <ul className="flex justify-center space-x-6 text-sm text-gray-800">
-            {["Menú", "Contacto", "About Us", "FAQ"].map((item, index) => (
+            {["Menú", "Contacto"].map((item, index) => (
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.1, color: "#ffffff" }}
